@@ -6,292 +6,230 @@
 <title>Shop Quà Tặng Liên Quân</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-
-body{
-    font-family:Arial,sans-serif;
-    background:#070a10;
-    color:#fff;
+* {
+    box-sizing: border-box;
 }
 
-header{
-    background:#101722;
-    border-bottom:1px solid #293448;
-    padding:15px 5%;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    position:sticky;
-    top:0;
-    z-index:10;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #080b12;
+    color: white;
 }
 
-.logo{
-    color:#ffd700;
-    font-size:21px;
-    font-weight:bold;
+header {
+    background: #111827;
+    padding: 15px 20px;
+    border-bottom: 1px solid #333;
 }
 
-nav{
-    display:flex;
-    gap:8px;
-    flex-wrap:wrap;
-    justify-content:center;
+.header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
 }
 
-nav button{
-    background:transparent;
-    color:#ddd;
-    border:0;
-    padding:9px 12px;
-    cursor:pointer;
-    border-radius:7px;
+.logo {
+    color: #ffd700;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-nav button:hover{
-    background:#202b3c;
-    color:#ffd700;
+button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 8px;
+    padding: 11px 16px;
+    font-weight: bold;
 }
 
-.user{
-    display:flex;
-    align-items:center;
-    gap:10px;
+.gold {
+    background: #ffd700;
+    color: #111;
 }
 
-.qh{
-    color:#ffd700;
-    font-weight:bold;
+.dark {
+    background: #252f3f;
+    color: white;
 }
 
-.btn{
-    background:#ffd700;
-    color:#111;
-    border:0;
-    border-radius:8px;
-    padding:11px 17px;
-    font-weight:bold;
-    cursor:pointer;
+nav {
+    max-width: 1100px;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
 }
 
-.btn:hover{
-    opacity:.85;
+nav button {
+    background: transparent;
+    color: #ddd;
 }
 
-.page{
-    display:none;
-    max-width:1100px;
-    margin:auto;
-    padding:35px 20px;
+nav button:hover {
+    background: #252f3f;
 }
 
-.page.active{
-    display:block;
+.page {
+    display: none;
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
 }
 
-.hero{
-    text-align:center;
-    padding:70px 20px;
-    background:linear-gradient(#111827,#070a10);
+.page.active {
+    display: block;
 }
 
-.hero h1{
-    font-size:42px;
-    color:#ffd700;
-    margin-bottom:15px;
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(#151d2c, #080b12);
 }
 
-.hero p{
-    color:#aaa;
-    margin-bottom:25px;
+.hero h1 {
+    color: #ffd700;
+    font-size: 40px;
 }
 
-.section-title{
-    text-align:center;
-    margin-bottom:25px;
+.hero p {
+    color: #aaa;
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-    gap:20px;
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
 }
 
-.card{
-    background:#101722;
-    border:1px solid #293448;
-    border-radius:14px;
-    padding:22px;
+.card {
+    background: #111827;
+    border: 1px solid #303b4d;
+    border-radius: 12px;
+    padding: 22px;
 }
 
-.card:hover{
-    border-color:#ffd700;
+.card h2,
+.card h3 {
+    color: #ffd700;
 }
 
-.card h3{
-    color:#ffd700;
-    margin-bottom:12px;
+.card p {
+    color: #aaa;
+    line-height: 1.6;
 }
 
-.card p{
-    color:#aaa;
-    line-height:1.6;
-    margin-bottom:18px;
+.price {
+    color: #00e676;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 15px 0;
 }
 
-.price{
-    color:#00e676;
-    font-size:21px;
-    font-weight:bold;
-    margin-bottom:15px;
+.form {
+    max-width: 420px;
+    margin: auto;
+    background: #111827;
+    border: 1px solid #303b4d;
+    border-radius: 12px;
+    padding: 25px;
 }
 
-.account-img{
-    width:100%;
-    height:150px;
-    object-fit:cover;
-    border-radius:10px;
-    margin-bottom:15px;
+input {
+    width: 100%;
+    padding: 13px;
+    margin: 7px 0;
+    background: #080b12;
+    border: 1px solid #303b4d;
+    border-radius: 7px;
+    color: white;
 }
 
-.balance{
-    text-align:center;
-    background:#101722;
-    border:1px solid #293448;
-    border-radius:15px;
-    padding:30px;
-    margin-bottom:25px;
+.balance {
+    text-align: center;
+    background: #111827;
+    padding: 30px;
+    border-radius: 12px;
 }
 
-.balance-number{
-    color:#ffd700;
-    font-size:38px;
-    font-weight:bold;
-    margin:12px;
+.qh {
+    font-size: 38px;
+    color: #ffd700;
+    font-weight: bold;
 }
 
-.form{
-    max-width:450px;
-    margin:20px auto;
-    background:#101722;
-    border:1px solid #293448;
-    border-radius:15px;
-    padding:25px;
-}
-
-input,select{
-    width:100%;
-    padding:13px;
-    margin-bottom:12px;
-    border-radius:8px;
-    border:1px solid #344158;
-    background:#070a10;
-    color:#fff;
-    outline:none;
-}
-
-input:focus{
-    border-color:#ffd700;
-}
-
-.wheel{
-    width:260px;
-    height:260px;
-    border-radius:50%;
-    margin:30px auto;
-    border:10px solid #293448;
-    background:conic-gradient(
-        #ffd700 0deg 45deg,
-        #ff7043 45deg 90deg,
+.wheel {
+    width: 250px;
+    height: 250px;
+    margin: 30px auto;
+    border-radius: 50%;
+    border: 8px solid #ddd;
+    background: conic-gradient(
+        #ffd700 0 45deg,
+        #ef5350 45deg 90deg,
         #42a5f5 90deg 135deg,
         #66bb6a 135deg 180deg,
         #ab47bc 180deg 225deg,
         #26c6da 225deg 270deg,
-        #ef5350 270deg 315deg,
+        #ff7043 270deg 315deg,
         #8d6e63 315deg 360deg
     );
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    transition:transform 3s cubic-bezier(.12,.72,.15,1);
+    transition: transform 3s ease-out;
 }
 
-.wheel span{
-    background:#111;
-    width:75px;
-    height:75px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
+.center {
+    text-align: center;
 }
 
-.center{
-    text-align:center;
+.notice {
+    background: #172235;
+    padding: 15px;
+    border-radius: 8px;
+    color: #ccc;
+    margin-bottom: 20px;
 }
 
-.history{
-    background:#101722;
-    border:1px solid #293448;
-    border-radius:12px;
-    overflow:hidden;
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.8);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
-.history div{
-    padding:14px;
-    border-bottom:1px solid #293448;
+.modal-box {
+    background: #111827;
+    width: 100%;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 12px;
 }
 
-.notice{
-    background:#182234;
-    border-left:4px solid #ffd700;
-    padding:15px;
-    border-radius:7px;
-    margin-bottom:20px;
-    color:#ccc;
+.close {
+    text-align: right;
+    color: #aaa;
+    cursor: pointer;
 }
 
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.82);
-    z-index:100;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
+footer {
+    text-align: center;
+    color: #666;
+    padding: 40px 20px;
 }
 
-.modal-box{
-    width:100%;
-    max-width:420px;
-    background:#101722;
-    border:1px solid #293448;
-    border-radius:15px;
-    padding:25px;
-}
-
-.close{
-    float:right;
-    color:#aaa;
-    cursor:pointer;
-}
-
-footer{
-    text-align:center;
-    padding:40px 20px;
-    color:#666;
-}
-
-@media(max-width:800px){
-    header{
-        flex-direction:column;
-        gap:12px;
+@media(max-width:700px) {
+    .header {
+        flex-direction: column;
     }
 
-    .hero h1{
-        font-size:30px;
+    .hero h1 {
+        font-size: 30px;
     }
 }
 </style>
@@ -300,20 +238,24 @@ footer{
 <body>
 
 <header>
+<div class="header">
 
-<div class="logo">🎁 SHOP QUÀ TẶNG</div>
+<div class="logo">
+🎁 SHOP QUÀ TẶNG LIÊN QUÂN
+</div>
+
+<div id="accountArea">
+<button class="gold" onclick="openLogin()">Đăng nhập</button>
+</div>
+
+</div>
 
 <nav>
-<button onclick="showPage('home')">Trang chủ</button>
-<button onclick="showPage('wheel')">🎰 Vòng quay</button>
-<button onclick="showPage('accounts')">🛒 Kho ACC</button>
-<button onclick="showPage('wallet')">💎 Ví QH</button>
-<button onclick="showPage('history')">📜 Lịch sử</button>
+<button onclick="page('home')">🏠 Trang chủ</button>
+<button onclick="page('wheel')">🎰 Vòng quay</button>
+<button onclick="page('accounts')">🛒 Kho ACC</button>
+<button onclick="page('wallet')">💎 Ví QH</button>
 </nav>
-
-<div class="user" id="userArea">
-<button class="btn" onclick="openLogin()">Đăng nhập</button>
-</div>
 
 </header>
 
@@ -327,45 +269,39 @@ footer{
 <h1>🎁 SHOP QUÀ TẶNG LIÊN QUÂN</h1>
 
 <p>
-Quà may mắn • Vòng quay QH • Kho tài khoản
+Quà tân thủ • Vòng quay QH • Tài khoản Liên Quân
 </p>
 
-<button class="btn" onclick="claimGift()">
-🎁 NHẬN QUÀ TÂN THỦ
+<button class="gold" onclick="gift()">
+NHẬN QUÀ TÂN THỦ
 </button>
 
 </div>
 
-<br>
+<div class="page" style="display:block">
 
-<div class="section-title">
-<h2>DỊCH VỤ CỦA SHOP</h2>
-</div>
+<h2>✨ Dịch vụ</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>🎁 Quà may mắn</h3>
-<p>
-Khách mới có thể nhận phần thưởng một lần.
-</p>
-<button class="btn" onclick="claimGift()">NHẬN QUÀ</button>
+<p>Khách mới nhận phần thưởng một lần.</p>
+<button class="gold" onclick="gift()">Nhận quà</button>
 </div>
 
 <div class="card">
 <h3>🎰 Vòng quay QH</h3>
-<p>
-Sử dụng lượt quay để nhận QH theo phần thưởng.
-</p>
-<button class="btn" onclick="showPage('wheel')">QUAY NGAY</button>
+<p>Dùng lượt quay để nhận QH.</p>
+<button class="gold" onclick="page('wheel')">Quay ngay</button>
 </div>
 
 <div class="card">
-<h3>🛒 Kho tài khoản</h3>
-<p>
-Xem các tài khoản đang được đăng bán.
-</p>
-<button class="btn" onclick="showPage('accounts')">XEM ACC</button>
+<h3>🛒 Kho ACC</h3>
+<p>Xem các tài khoản đang bán.</p>
+<button class="gold" onclick="page('accounts')">Xem ACC</button>
+</div>
+
 </div>
 
 </div>
@@ -377,27 +313,23 @@ Xem các tài khoản đang được đăng bán.
 
 <section id="wheel" class="page">
 
-<div class="section-title">
-<h2>🎰 VÒNG QUAY QH</h2>
-</div>
+<h1>🎰 Vòng quay QH</h1>
 
 <div class="notice">
-Mỗi lượt quay sẽ trừ 1 lượt quay trong tài khoản.
-Đây hiện là hệ thống demo.
+Đây là bản demo. Chưa có thanh toán tiền thật.
 </div>
 
 <div class="center">
 
-<div class="wheel" id="wheel">
-<span>QUAY</span>
-</div>
+<div class="wheel" id="wheelCircle"></div>
 
-<p>Lượt quay: <b id="spinCount">0</b></p>
+<p>
+Lượt quay:
+<strong id="spins">0</strong>
+</p>
 
-<br>
-
-<button class="btn" onclick="spinWheel()">
-🎰 QUAY
+<button class="gold" onclick="spin()">
+QUAY
 </button>
 
 </div>
@@ -405,85 +337,50 @@ Mỗi lượt quay sẽ trừ 1 lượt quay trong tài khoản.
 </section>
 
 
-<!-- KHO ACC -->
+<!-- ACC -->
 
 <section id="accounts" class="page">
 
-<div class="section-title">
-<h2>🛒 KHO TÀI KHOẢN</h2>
-</div>
+<h1>🛒 Kho tài khoản</h1>
 
 <div class="cards">
 
 <div class="card">
-
-<img
-class="account-img"
-src="https://placehold.co/600x350/111827/ffd700?text=ACC+01"
->
-
 <h3>ACC #001</h3>
-
 <p>
 Nhiều tướng<br>
 Nhiều trang phục<br>
 Rank cao
 </p>
-
 <div class="price">500.000đ</div>
-
-<button class="btn" onclick="buyAccount('ACC #001')">
-MUA NGAY
+<button class="gold" onclick="buy('ACC #001')">
+Mua ngay
 </button>
-
 </div>
 
-
 <div class="card">
-
-<img
-class="account-img"
-src="https://placehold.co/600x350/111827/ffd700?text=ACC+02"
->
-
 <h3>ACC #002</h3>
-
 <p>
 Nhiều skin<br>
 Nhiều tướng<br>
 Tài khoản đẹp
 </p>
-
 <div class="price">300.000đ</div>
-
-<button class="btn" onclick="buyAccount('ACC #002')">
-MUA NGAY
+<button class="gold" onclick="buy('ACC #002')">
+Mua ngay
 </button>
-
 </div>
 
-
 <div class="card">
-
-<img
-class="account-img"
-src="https://placehold.co/600x350/111827/ffd700?text=ACC+03"
->
-
 <h3>ACC #003</h3>
-
 <p>
 Skin đẹp<br>
-Rank cao<br>
 Nhiều vật phẩm
 </p>
-
 <div class="price">200.000đ</div>
-
-<button class="btn" onclick="buyAccount('ACC #003')">
-MUA NGAY
+<button class="gold" onclick="buy('ACC #003')">
+Mua ngay
 </button>
-
 </div>
 
 </div>
@@ -495,25 +392,23 @@ MUA NGAY
 
 <section id="wallet" class="page">
 
-<div class="section-title">
-<h2>💎 VÍ QH</h2>
-</div>
+<h1>💎 Ví QH</h1>
 
 <div class="balance">
 
-<p>Số dư hiện tại</p>
+<p>Số QH hiện có</p>
 
-<div class="balance-number">
+<div class="qh">
 <span id="balance">0</span> QH
 </div>
 
-<button class="btn" onclick="showPage('deposit')">
+<br>
+
+<button class="gold" onclick="deposit()">
 💰 Nạp tiền
 </button>
 
-&nbsp;
-
-<button class="btn" onclick="showPage('withdraw')">
+<button class="dark" onclick="withdraw()">
 📤 Rút QH
 </button>
 
@@ -522,89 +417,48 @@ MUA NGAY
 </section>
 
 
-<!-- NẠP -->
+<!-- ĐĂNG NHẬP -->
 
-<section id="deposit" class="page">
+<div class="modal" id="loginModal">
 
-<div class="section-title">
-<h2>💰 NẠP TIỀN</h2>
+<div class="modal-box">
+
+<div class="close" onclick="closeLogin()">
+✕ Đóng
 </div>
 
-<div class="form">
+<h2>👤 Tài khoản Shop</h2>
 
-<div class="notice">
-Đây chỉ là giao diện demo.
-Chưa kết nối thanh toán thật.
-</div>
+<input
+id="username"
+placeholder="Tên đăng nhập"
+>
 
-<label>Số tiền</label>
+<input
+id="password"
+type="password"
+placeholder="Mật khẩu"
+>
 
-<select id="depositAmount">
+<button
+class="gold"
+style="width:100%;margin-top:10px"
+onclick="register()"
+>
+Đăng ký
+</button>
 
-<option value="10000">10.000đ</option>
-<option value="20000">20.000đ</option>
-<option value="50000">50.000đ</option>
-<option value="100000">100.000đ</option>
-
-</select>
-
-<button class="btn" style="width:100%" onclick="fakeDeposit()">
-TẠO ĐƠN NẠP
+<button
+class="dark"
+style="width:100%;margin-top:10px"
+onclick="login()"
+>
+Đăng nhập
 </button>
 
 </div>
 
-</section>
-
-
-<!-- RÚT -->
-
-<section id="withdraw" class="page">
-
-<div class="section-title">
-<h2>📤 RÚT QH</h2>
 </div>
-
-<div class="form">
-
-<div class="notice">
-Demo: yêu cầu tối thiểu 1.000 QH.
-Phần thanh toán thật cần backend và hệ thống xác minh.
-</div>
-
-<input
-id="withdrawAmount"
-type="number"
-placeholder="Số QH muốn rút"
->
-
-<input
-id="withdrawInfo"
-placeholder="Thông tin nhận thưởng"
->
-
-<button class="btn" style="width:100%" onclick="withdraw()">
-GỬI YÊU CẦU
-</button>
-
-</div>
-
-</section>
-
-
-<!-- LỊCH SỬ -->
-
-<section id="history" class="page">
-
-<div class="section-title">
-<h2>📜 LỊCH SỬ</h2>
-</div>
-
-<div class="history" id="historyList">
-<div>Chưa có giao dịch.</div>
-</div>
-
-</section>
 
 
 <footer>
@@ -612,458 +466,408 @@ GỬI YÊU CẦU
 </footer>
 
 
-<!-- LOGIN -->
-
-<div class="modal" id="loginModal">
-
-<div class="modal-box">
-
-<div class="close" onclick="closeLogin()">✕</div>
-
-<h2 style="color:#ffd700;margin-bottom:20px">
-👤 TÀI KHOẢN SHOP
-</h2>
-
-<input
-id="loginUser"
-placeholder="Tên đăng nhập"
->
-
-<input
-id="loginPass"
-type="password"
-placeholder="Mật khẩu"
->
-
-<button
-class="btn"
-style="width:100%;margin-bottom:10px"
-onclick="login()"
->
-ĐĂNG NHẬP
-</button>
-
-<button
-style="width:100%;padding:12px;background:#293448;color:#fff;border:0;border-radius:8px;cursor:pointer"
-onclick="register()"
->
-ĐĂNG KÝ TÀI KHOẢN
-</button>
-
-</div>
-
-</div>
-
-
 <script>
 
-let user = JSON.parse(localStorage.getItem("shopUser"));
+/* =========================
+   DỮ LIỆU DEMO
+========================= */
 
-let users = JSON.parse(localStorage.getItem("shopUsers") || "{}");
+let currentUser =
+localStorage.getItem("shop_username");
 
 let balance =
-Number(localStorage.getItem("shopBalance") || 0);
+Number(localStorage.getItem("shop_balance") || 0);
 
 let spins =
-Number(localStorage.getItem("shopSpins") || 0);
+Number(localStorage.getItem("shop_spins") || 0);
 
-let history =
-JSON.parse(localStorage.getItem("shopHistory") || "[]");
-
-let claimed =
-localStorage.getItem("giftClaimed") === "true";
+let giftClaimed =
+localStorage.getItem("shop_gift") === "yes";
 
 
-function save(){
+/* =========================
+   CHUYỂN TRANG
+========================= */
 
-localStorage.setItem("shopBalance",balance);
+function page(name) {
 
-localStorage.setItem("shopSpins",spins);
+    document
+    .querySelectorAll(".page")
+    .forEach(function(x) {
+        x.classList.remove("active");
+    });
 
-localStorage.setItem(
-"shopHistory",
-JSON.stringify(history)
-);
+    document
+    .getElementById(name)
+    .classList.add("active");
 
+    window.scrollTo(0,0);
 }
 
 
-function showPage(id){
+/* =========================
+   ĐĂNG NHẬP
+========================= */
 
-document
-.querySelectorAll(".page")
-.forEach(p=>p.classList.remove("active"));
+function openLogin() {
+    document
+    .getElementById("loginModal")
+    .style.display = "flex";
+}
 
-document
-.getElementById(id)
-.classList.add("active");
-
-window.scrollTo(0,0);
-
+function closeLogin() {
+    document
+    .getElementById("loginModal")
+    .style.display = "none";
 }
 
 
-function openLogin(){
+function register() {
 
-document.getElementById("loginModal").style.display="flex";
+    let username =
+    document.getElementById("username").value.trim();
 
+    let password =
+    document.getElementById("password").value;
+
+    if(username === "" || password === "") {
+
+        alert("Vui lòng nhập đầy đủ thông tin.");
+
+        return;
+    }
+
+    if(password.length < 6) {
+
+        alert("Mật khẩu cần ít nhất 6 ký tự.");
+
+        return;
+    }
+
+    localStorage.setItem(
+        "shop_username",
+        username
+    );
+
+    localStorage.setItem(
+        "shop_password_demo",
+        password
+    );
+
+    currentUser = username;
+
+    closeLogin();
+
+    updateAccount();
+
+    alert(
+        "Đăng ký thành công!\n\n" +
+        "Đây là tài khoản demo của website."
+    );
 }
 
 
-function closeLogin(){
+function login() {
 
-document.getElementById("loginModal").style.display="none";
+    let username =
+    document.getElementById("username").value.trim();
 
+    let password =
+    document.getElementById("password").value;
+
+    let savedUser =
+    localStorage.getItem("shop_username");
+
+    let savedPassword =
+    localStorage.getItem("shop_password_demo");
+
+    if(
+        username === savedUser &&
+        password === savedPassword
+    ) {
+
+        currentUser = username;
+
+        closeLogin();
+
+        updateAccount();
+
+        alert("Đăng nhập thành công!");
+
+    } else {
+
+        alert(
+            "Sai tài khoản hoặc mật khẩu."
+        );
+    }
 }
 
 
-function register(){
+function logout() {
 
-let u =
-document.getElementById("loginUser").value.trim();
+    localStorage.removeItem(
+        "shop_username"
+    );
 
-let p =
-document.getElementById("loginPass").value;
+    currentUser = null;
 
-if(!u || !p){
-
-alert("Hãy nhập tên đăng nhập và mật khẩu.");
-
-return;
-
-}
-
-if(users[u]){
-
-alert("Tên đăng nhập đã tồn tại.");
-
-return;
-
-}
-
-users[u]=p;
-
-localStorage.setItem(
-"shopUsers",
-JSON.stringify(users)
-);
-
-user=u;
-
-localStorage.setItem(
-"shopUser",
-JSON.stringify(user)
-);
-
-alert("Đăng ký thành công!");
-
-closeLogin();
-
-updateUser();
-
+    updateAccount();
 }
 
 
-function login(){
+function updateAccount() {
 
-let u =
-document.getElementById("loginUser").value.trim();
+    let area =
+    document.getElementById("accountArea");
 
-let p =
-document.getElementById("loginPass").value;
+    if(currentUser) {
 
-if(users[u] && users[u]===p){
+        area.innerHTML =
+        `
+        <span>👤 ${currentUser}</span>
+        <button class="dark"
+        onclick="logout()">
+        Đăng xuất
+        </button>
+        `;
 
-user=u;
+    } else {
 
-localStorage.setItem(
-"shopUser",
-JSON.stringify(user)
-);
+        area.innerHTML =
+        `
+        <button class="gold"
+        onclick="openLogin()">
+        Đăng nhập
+        </button>
+        `;
+    }
 
-closeLogin();
+    document.getElementById(
+        "balance"
+    ).innerText = balance;
 
-updateUser();
-
-alert("Đăng nhập thành công!");
-
-}else{
-
-alert("Sai tài khoản hoặc mật khẩu.");
-
-}
-
-}
-
-
-function logout(){
-
-user=null;
-
-localStorage.removeItem("shopUser");
-
-updateUser();
-
+    document.getElementById(
+        "spins"
+    ).innerText = spins;
 }
 
 
-function updateUser(){
+/* =========================
+   QUÀ TÂN THỦ
+========================= */
 
-let area =
-document.getElementById("userArea");
+function gift() {
 
-if(user){
+    if(!currentUser) {
 
-area.innerHTML=`
+        alert(
+            "Bạn cần đăng nhập trước."
+        );
 
-<span>👤 ${user}</span>
+        openLogin();
 
-<span class="qh">
-💎 ${balance} QH
-</span>
+        return;
+    }
 
-<button class="btn" onclick="logout()">
-Đăng xuất
-</button>
+    if(giftClaimed) {
 
-`;
+        alert(
+            "Tài khoản này đã nhận quà rồi."
+        );
 
-}else{
+        return;
+    }
 
-area.innerHTML=`
+    let reward =
+    Math.random() < 0.5 ? 200 : 400;
 
-<button class="btn" onclick="openLogin()">
-Đăng nhập
-</button>
+    balance += reward;
 
-`;
+    spins += 1;
 
-}
+    giftClaimed = true;
 
-document.getElementById("balance").innerText=balance;
+    localStorage.setItem(
+        "shop_balance",
+        balance
+    );
 
-document.getElementById("spinCount").innerText=spins;
+    localStorage.setItem(
+        "shop_spins",
+        spins
+    );
 
-renderHistory();
+    localStorage.setItem(
+        "shop_gift",
+        "yes"
+    );
 
-}
+    updateAccount();
 
-
-function needLogin(){
-
-if(!user){
-
-openLogin();
-
-return false;
-
-}
-
-return true;
-
-}
-
-
-function claimGift(){
-
-if(!needLogin()) return;
-
-if(claimed){
-
-alert("Bạn đã nhận quà tân thủ rồi.");
-
-return;
-
-}
-
-let reward =
-Math.random()<0.5 ? 200 : 400;
-
-balance += reward;
-
-spins += 1;
-
-claimed=true;
-
-localStorage.setItem("giftClaimed","true");
-
-history.unshift(
-"🎁 Nhận quà tân thủ: +"+reward+" QH"
-);
-
-save();
-
-updateUser();
-
-alert(
-"🎉 Chúc mừng!\nBạn nhận được "+reward+" QH và 1 lượt quay."
-);
-
+    alert(
+        "🎉 Chúc mừng!\n\n" +
+        "Bạn nhận được " +
+        reward +
+        " QH\n" +
+        "+ 1 lượt quay."
+    );
 }
 
 
-function spinWheel(){
+/* =========================
+   VÒNG QUAY
+========================= */
 
-if(!needLogin()) return;
+function spin() {
 
-if(spins<=0){
+    if(!currentUser) {
 
-alert("Bạn không có lượt quay.");
+        alert(
+            "Bạn cần đăng nhập trước."
+        );
 
-return;
+        openLogin();
 
-}
+        return;
+    }
 
-spins--;
+    if(spins <= 0) {
 
-let rewards=[
-50,
-100,
-150,
-200,
-300,
-400,
-500,
-1000
-];
+        alert(
+            "Bạn không còn lượt quay."
+        );
 
-let reward=
-rewards[Math.floor(Math.random()*rewards.length)];
+        return;
+    }
 
-let rotation=
-1440 + Math.floor(Math.random()*360);
+    spins--;
 
-document.getElementById("wheel")
-.style.transform=
-"rotate("+rotation+"deg)";
+    let rewards = [
+        50,
+        100,
+        150,
+        200,
+        300,
+        400
+    ];
 
-setTimeout(()=>{
+    let reward =
+    rewards[
+        Math.floor(
+            Math.random() *
+            rewards.length
+        )
+    ];
 
-balance+=reward;
+    let circle =
+    document.getElementById(
+        "wheelCircle"
+    );
 
-history.unshift(
-"🎰 Vòng quay: +"+reward+" QH"
-);
+    circle.style.transform =
+    "rotate(" +
+    (1440 +
+    Math.floor(Math.random()*360)) +
+    "deg)";
 
-save();
+    setTimeout(function() {
 
-updateUser();
+        balance += reward;
 
-alert(
-"🎉 Bạn nhận được "+reward+" QH!"
-);
+        localStorage.setItem(
+            "shop_balance",
+            balance
+        );
 
-},3000);
+        localStorage.setItem(
+            "shop_spins",
+            spins
+        );
 
-}
+        updateAccount();
 
+        alert(
+            "🎉 Bạn nhận được " +
+            reward +
+            " QH!"
+        );
 
-function buyAccount(name){
-
-if(!needLogin()) return;
-
-alert(
-"Bạn chọn "+name+
-".\n\nĐây là demo. Chưa kết nối thanh toán thật."
-);
-
-}
-
-
-function fakeDeposit(){
-
-if(!needLogin()) return;
-
-let amount=
-Number(document.getElementById("depositAmount").value);
-
-history.unshift(
-"💰 Tạo đơn nạp demo: "+
-amount.toLocaleString("vi-VN")+"đ"
-);
-
-save();
-
-updateUser();
-
-alert(
-"Đã tạo đơn demo "+amount.toLocaleString("vi-VN")+"đ."
-);
-
+    },3000);
 }
 
 
-function withdraw(){
+/* =========================
+   ACC
+========================= */
 
-if(!needLogin()) return;
+function buy(name) {
 
-let amount=
-Number(document.getElementById("withdrawAmount").value);
+    if(!currentUser) {
 
-let info=
-document.getElementById("withdrawInfo").value.trim();
+        alert(
+            "Bạn cần đăng nhập trước."
+        );
 
-if(amount<1000){
+        openLogin();
 
-alert("Phải đủ tối thiểu 1.000 QH.");
+        return;
+    }
 
-return;
-
-}
-
-if(amount>balance){
-
-alert("Số dư không đủ.");
-
-return;
-
-}
-
-if(!info){
-
-alert("Hãy nhập thông tin nhận thưởng.");
-
-return;
-
-}
-
-balance-=amount;
-
-history.unshift(
-"📤 Yêu cầu rút "+amount+" QH"
-);
-
-save();
-
-updateUser();
-
-alert(
-"Đã tạo yêu cầu rút demo."
-);
-
+    alert(
+        "Bạn chọn " +
+        name +
+        ".\n\n" +
+        "Chức năng mua hàng thật sẽ được kết nối ở bước backend."
+    );
 }
 
 
-function renderHistory(){
+/* =========================
+   NẠP / RÚT DEMO
+========================= */
 
-let box=
-document.getElementById("historyList");
+function deposit() {
 
-if(history.length===0){
-
-box.innerHTML="<div>Chưa có giao dịch.</div>";
-
-return;
-
-}
-
-box.innerHTML=
-history.map(x=>"<div>"+x+"</div>").join("");
-
+    alert(
+        "Trang nạp tiền đang là bản demo.\n\n" +
+        "Chưa kết nối thanh toán thật."
+    );
 }
 
 
-updateUser();
+function withdraw() {
+
+    if(!currentUser) {
+
+        alert(
+            "Bạn cần đăng nhập trước."
+        );
+
+        openLogin();
+
+        return;
+    }
+
+    if(balance < 1000) {
+
+        alert(
+            "Bạn cần ít nhất 1.000 QH để rút."
+        );
+
+        return;
+    }
+
+    alert(
+        "Chức năng rút tiền thật cần backend và hệ thống thanh toán an toàn."
+    );
+}
+
+
+/* =========================
+   KHỞI ĐỘNG
+========================= */
+
+updateAccount();
 
 </script>
 
