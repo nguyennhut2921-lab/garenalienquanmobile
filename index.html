@@ -20,16 +20,17 @@ header{
     border-bottom:1px solid #303b4d;
     position:sticky;
     top:0;
-    z-index:10;
+    z-index:50;
 }
 
 .header{
-    max-width:1100px;
+    max-width:1150px;
     margin:auto;
     padding:15px 20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    gap:15px;
 }
 
 .logo{
@@ -39,11 +40,11 @@ header{
 }
 
 nav{
-    max-width:1100px;
+    max-width:1150px;
     margin:auto;
     padding:8px 20px;
     display:flex;
-    gap:5px;
+    gap:6px;
     flex-wrap:wrap;
 }
 
@@ -76,12 +77,12 @@ button{
 
 .dark{
     background:#263247;
-    color:white;
+    color:#fff;
 }
 
 .page{
     display:none;
-    max-width:1100px;
+    max-width:1150px;
     margin:auto;
     padding:35px 20px;
 }
@@ -92,17 +93,18 @@ button{
 
 .hero{
     text-align:center;
-    padding:70px 20px;
+    padding:75px 20px;
     background:linear-gradient(#151e30,#080b12);
 }
 
 .hero h1{
     color:#ffd700;
-    font-size:40px;
+    font-size:42px;
 }
 
 .hero p{
     color:#aaa;
+    font-size:17px;
 }
 
 .cards{
@@ -144,8 +146,14 @@ button{
     margin-bottom:8px;
 }
 
-.badge.goldbadge{
+.badge2{
+    display:inline-block;
     background:#b8860b;
+    padding:6px 10px;
+    border-radius:6px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:8px;
 }
 
 .stock{
@@ -160,7 +168,7 @@ button{
     margin-bottom:25px;
     border-radius:6px;
     color:#ccc;
-    line-height:1.6;
+    line-height:1.7;
 }
 
 .maintenance{
@@ -175,6 +183,43 @@ button{
     color:#ffd700;
 }
 
+.money{
+    color:#00e676;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.top-list{
+    background:#111827;
+    border:1px solid #303b4d;
+    border-radius:14px;
+    overflow:hidden;
+}
+
+.top-row{
+    display:grid;
+    grid-template-columns:70px 1fr 150px 150px;
+    gap:10px;
+    padding:15px;
+    border-bottom:1px solid #303b4d;
+    align-items:center;
+}
+
+.top-row:first-child{
+    color:#ffd700;
+    font-weight:bold;
+}
+
+.top-number{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.reward{
+    color:#00e676;
+    font-weight:bold;
+}
+
 .balance{
     text-align:center;
     background:#111827;
@@ -185,9 +230,63 @@ button{
 
 .qh{
     color:#ffd700;
-    font-size:38px;
+    font-size:40px;
     font-weight:bold;
     margin:12px;
+}
+
+.payment{
+    background:#111827;
+    border:1px solid #303b4d;
+    border-radius:14px;
+    padding:22px;
+    margin-bottom:20px;
+}
+
+.payment h3{
+    color:#ffd700;
+}
+
+.bank{
+    background:#080b12;
+    padding:15px;
+    border-radius:8px;
+    line-height:1.8;
+}
+
+input,select{
+    width:100%;
+    padding:13px;
+    margin:7px 0;
+    background:#080b12;
+    border:1px solid #303b4d;
+    border-radius:7px;
+    color:white;
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.8);
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    z-index:100;
+}
+
+.modal-box{
+    width:100%;
+    max-width:430px;
+    background:#111827;
+    padding:25px;
+    border-radius:14px;
+}
+
+.close{
+    text-align:right;
+    color:#aaa;
+    cursor:pointer;
 }
 
 .wheel-area{
@@ -246,56 +345,6 @@ button{
     align-items:center;
     justify-content:center;
     font-weight:bold;
-    z-index:4;
-}
-
-.table{
-    background:#111827;
-    border:1px solid #303b4d;
-    border-radius:12px;
-    overflow:hidden;
-}
-
-.row{
-    display:grid;
-    grid-template-columns:60px 1fr 1fr;
-    padding:14px;
-    border-bottom:1px solid #303b4d;
-}
-
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.8);
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-    z-index:100;
-}
-
-.modal-box{
-    width:100%;
-    max-width:430px;
-    background:#111827;
-    padding:25px;
-    border-radius:14px;
-}
-
-.close{
-    text-align:right;
-    color:#aaa;
-    cursor:pointer;
-}
-
-input{
-    width:100%;
-    padding:13px;
-    margin:7px 0;
-    background:#080b12;
-    border:1px solid #303b4d;
-    border-radius:7px;
-    color:white;
 }
 
 footer{
@@ -305,14 +354,23 @@ footer{
 }
 
 @media(max-width:700px){
-    .header{
-        flex-direction:column;
-        gap:10px;
-    }
 
-    .hero h1{
-        font-size:30px;
-    }
+.header{
+    flex-direction:column;
+}
+
+.hero h1{
+    font-size:30px;
+}
+
+.top-row{
+    grid-template-columns:45px 1fr;
+}
+
+.top-row .hide-mobile{
+    display:none;
+}
+
 }
 </style>
 </head>
@@ -328,7 +386,9 @@ footer{
 </div>
 
 <div id="accountArea">
-<button class="gold" onclick="openLogin()">Đăng nhập</button>
+<button class="gold" onclick="openLogin()">
+Đăng nhập
+</button>
 </div>
 
 </div>
@@ -337,6 +397,7 @@ footer{
 
 <button onclick="showPage('home')">🏠 Trang chủ</button>
 <button onclick="showPage('random')">🎲 Random ACC</button>
+<button onclick="showPage('deposit')">💰 Nạp tiền</button>
 <button onclick="showPage('wheel')">🎰 Vòng quay</button>
 <button onclick="showPage('top')">🏆 Top nạp</button>
 <button onclick="showPage('wallet')">💎 Ví QH</button>
@@ -369,45 +430,43 @@ Random ACC • Vòng quay QH • Quà tân thủ
 <div class="cards">
 
 <div class="card">
-
 <h3>🎲 Random ACC</h3>
-
 <p>
-Nhiều gói Random ACC từ 50K đến 800K.
+Random ACC được chia thành từng gói riêng.
 </p>
-
 <button class="gold" onclick="showPage('random')">
-XEM GÓI
+XEM RANDOM
 </button>
-
 </div>
 
 <div class="card">
-
-<h3>🎰 Vòng quay QH</h3>
-
+<h3>💰 Nạp tiền</h3>
 <p>
-Quay và nhận QH theo bảng phần thưởng được công bố.
+Hỗ trợ khu vực nạp tiền và hướng dẫn thanh toán.
 </p>
+<button class="gold" onclick="showPage('deposit')">
+NẠP TIỀN
+</button>
+</div>
 
+<div class="card">
+<h3>🎰 Vòng quay QH</h3>
+<p>
+Sử dụng lượt quay để nhận QH.
+</p>
 <button class="gold" onclick="showPage('wheel')">
 QUAY NGAY
 </button>
-
 </div>
 
 <div class="card">
-
-<h3>🎁 Quà tân thủ</h3>
-
+<h3>🏆 Top nạp</h3>
 <p>
-Khách mới nhận 200 hoặc 400 QH và 1 lượt quay.
+Bảng xếp hạng Top 1 đến Top 10.
 </p>
-
-<button class="gold" onclick="claimGift()">
-NHẬN QUÀ
+<button class="gold" onclick="showPage('top')">
+XEM TOP
 </button>
-
 </div>
 
 </div>
@@ -415,7 +474,7 @@ NHẬN QUÀ
 </section>
 
 
-<!-- RANDOM ACC -->
+<!-- RANDOM -->
 
 <section id="random" class="page">
 
@@ -423,20 +482,18 @@ NHẬN QUÀ
 
 <div class="notice">
 
-📝 <b>GHI CHÚ KHI MUA RANDOM ACC</b><br><br>
+📝 <b>GHI CHÚ</b><br><br>
 
-Random ACC được chia thành nhiều mức giá.
-Mỗi mức sử dụng kho tài khoản tương ứng.<br><br>
+Random ACC được chia thành từng mức riêng.
+Mỗi gói sử dụng kho ACC tương ứng.<br><br>
 
-Tài khoản nhận được phụ thuộc vào kho thực tế
-của gói đã mua. Vui lòng kiểm tra thông tin trước
-khi đặt mua.
+Kho bán ACC thường đang bảo trì.
+<b>Random ACC vẫn hoạt động bình thường.</b>
 
 </div>
 
 
 <div class="cards">
-
 
 <!-- 50K -->
 
@@ -445,22 +502,19 @@ khi đặt mua.
 <h3>🎲 RANDOM ACC 50K</h3>
 
 <p>
-Gói Random cơ bản dành cho người muốn thử.
+Gói Random cơ bản.
 </p>
 
 <p>
-🎁 Phần thưởng phụ thuộc kho ACC thực tế.
+🎁 Phần thưởng theo kho ACC thực tế.
 </p>
 
-<div class="price">
-50.000đ
-</div>
+<div class="price">50.000đ</div>
 
-<p class="stock">
-● Còn hàng
-</p>
+<p class="stock">● Còn hàng</p>
 
-<button class="gold" onclick="buyRandom(50000)">
+<button class="gold"
+onclick="buyRandom(50000,'Random ACC 50K')">
 MUA RANDOM
 </button>
 
@@ -482,18 +536,15 @@ Gói Hot dành cho học sinh, sinh viên.
 </p>
 
 <p>
-🎁 Phần thưởng phụ thuộc kho ACC thực tế.
+🎁 Phần thưởng theo kho ACC thực tế.
 </p>
 
-<div class="price">
-300.000đ
-</div>
+<div class="price">300.000đ</div>
 
-<p class="stock">
-● Còn hàng
-</p>
+<p class="stock">● Còn hàng</p>
 
-<button class="gold" onclick="buyRandom(300000)">
+<button class="gold"
+onclick="buyRandom(300000,'Random ACC 300K')">
 MUA RANDOM
 </button>
 
@@ -511,22 +562,19 @@ MUA RANDOM
 <h3>🎲 RANDOM ACC 500K</h3>
 
 <p>
-Gói Random được đánh dấu Best Seller.
+Gói Random Best Seller.
 </p>
 
 <p>
-📦 Số lượng hiện tại: <b>13 ACC</b>
+📦 Số lượng: <b>13 ACC</b>
 </p>
 
-<div class="price">
-500.000đ
-</div>
+<div class="price">500.000đ</div>
 
-<p class="stock">
-● Còn 13 ACC
-</p>
+<p class="stock">● Còn 13 ACC</p>
 
-<button class="gold" onclick="buyRandom(500000)">
+<button class="gold"
+onclick="buyRandom(500000,'Random ACC 500K')">
 MUA RANDOM
 </button>
 
@@ -537,7 +585,7 @@ MUA RANDOM
 
 <div class="card">
 
-<span class="badge goldbadge">
+<span class="badge2">
 👑 PREMIUM
 </span>
 
@@ -548,18 +596,15 @@ Gói Random Premium.
 </p>
 
 <p>
-📦 Số lượng hiện tại: <b>23 ACC</b>
+📦 Số lượng: <b>23 ACC</b>
 </p>
 
-<div class="price">
-800.000đ
-</div>
+<div class="price">800.000đ</div>
 
-<p class="stock">
-● Còn 23 ACC
-</p>
+<p class="stock">● Còn 23 ACC</p>
 
-<button class="gold" onclick="buyRandom(800000)">
+<button class="gold"
+onclick="buyRandom(800000,'Random ACC 800K')">
 MUA RANDOM
 </button>
 
@@ -572,14 +617,93 @@ MUA RANDOM
 
 <div class="maintenance">
 
-<h2>🔧 KHO ACC THƯỜNG</h2>
+<h2>🔧 KHO BÁN ACC THƯỜNG</h2>
 
 <p>
-Kho ACC thường hiện đang bảo trì để sửa lỗi.
+Kho bán ACC thường đang bảo trì để sửa lỗi.
 </p>
 
 <button class="dark" disabled>
 ĐANG BẢO TRÌ
+</button>
+
+</div>
+
+</section>
+
+
+<!-- NẠP -->
+
+<section id="deposit" class="page">
+
+<h1>💰 NẠP TIỀN</h1>
+
+<div class="notice">
+
+🎁 <b>THƯỞNG NẠP</b><br><br>
+
+Nạp càng nhiều có thể nhận ưu đãi theo
+các mốc thưởng được công bố.
+Không tự động cộng tiền nếu chưa có hệ thống
+xác nhận giao dịch.
+
+</div>
+
+
+<div class="payment">
+
+<h3>🏦 CHUYỂN KHOẢN</h3>
+
+<div class="bank">
+
+<b>Ngân hàng:</b> ĐIỀN NGÂN HÀNG CỦA BẠN<br>
+
+<b>Số tài khoản:</b> ĐIỀN STK CỦA BẠN<br>
+
+<b>Chủ tài khoản:</b> ĐIỀN TÊN CỦA BẠN<br>
+
+<b>Nội dung:</b> NAP [TÊN TÀI KHOẢN]
+
+</div>
+
+<br>
+
+<button class="gold" onclick="showBankNotice()">
+TÔI ĐÃ CHUYỂN KHOẢN
+</button>
+
+</div>
+
+
+<div class="payment">
+
+<h3>💳 NẠP CARD</h3>
+
+<p>
+Nhập thông tin thẻ ở hệ thống thanh toán
+được cấp phép của bạn.
+</p>
+
+<select id="cardType">
+
+<option value="">
+-- Chọn loại thẻ --
+</option>
+
+<option>Viettel</option>
+<option>Vinaphone</option>
+<option>Mobifone</option>
+
+</select>
+
+<input
+id="cardAmount"
+type="number"
+placeholder="Mệnh giá"
+>
+
+<button class="gold" onclick="cardDemo()">
+TIẾP TỤC
 </button>
 
 </div>
@@ -595,7 +719,7 @@ Kho ACC thường hiện đang bảo trì để sửa lỗi.
 
 <div class="notice">
 
-<b>Phần thưởng:</b><br><br>
+<b>Bảng phần thưởng hiện tại:</b><br><br>
 
 50 QH — 20%<br>
 100 QH — 20%<br>
@@ -623,11 +747,13 @@ QH
 </div>
 
 <p>
-Lượt quay: <b id="spins">0</b>
+Lượt quay:
+<b id="spins">0</b>
 </p>
 
 <p>
-Số dư: <b id="wheelBalance">0</b> QH
+Số dư:
+<b id="wheelBalance">0</b> QH
 </p>
 
 <button
@@ -642,7 +768,7 @@ onclick="spinWheel()">
 </section>
 
 
-<!-- TOP NẠP -->
+<!-- TOP -->
 
 <section id="top" class="page">
 
@@ -650,42 +776,106 @@ onclick="spinWheel()">
 
 <div class="notice">
 
-⚠️ <b>DỮ LIỆU MẪU</b><br>
-Các dữ liệu bên dưới chỉ minh họa giao diện,
-không phải giao dịch hoặc khách hàng thật.
+🏆 Top được xếp từ <b>1 đến 10</b> theo tổng tiền
+nạp thực tế.<br><br>
+
+Tên người chơi được che một phần để bảo vệ
+thông tin cá nhân.<br><br>
+
+Các dữ liệu bên dưới là <b>mẫu giao diện</b>.
+Khi shop có backend, hãy thay bằng dữ liệu
+giao dịch thật.
 
 </div>
 
-<div class="table">
 
-<div class="row">
-<b>#</b>
-<b>Người chơi</b>
-<b>Số tiền</b>
+<div class="top-list">
+
+<div class="top-row">
+<div>#</div>
+<div>Người chơi</div>
+<div class="hide-mobile">Tổng nạp</div>
+<div class="hide-mobile">Thưởng</div>
 </div>
 
-<div class="row">
-1
-Người chơi mẫu 01
-1.000.000đ
+
+<div class="top-row">
+<div class="top-number">🥇 1</div>
+<div>Ng***01</div>
+<div class="hide-mobile money">DỮ LIỆU THẬT</div>
+<div class="hide-mobile reward">Top 1</div>
 </div>
 
-<div class="row">
-2
-Người chơi mẫu 02
-750.000đ
+
+<div class="top-row">
+<div class="top-number">🥈 2</div>
+<div>Ng***02</div>
+<div class="hide-mobile money">DỮ LIỆU THẬT</div>
+<div class="hide-mobile reward">Top 2</div>
 </div>
 
-<div class="row">
-3
-Người chơi mẫu 03
-500.000đ
+
+<div class="top-row">
+<div class="top-number">🥉 3</div>
+<div>Ng***03</div>
+<div class="hide-mobile money">DỮ LIỆU THẬT</div>
+<div class="hide-mobile reward">Top 3</div>
 </div>
 
-<div class="row">
-4
-Người chơi mẫu 04
-300.000đ
+
+<div class="top-row">
+<div>4</div>
+<div>Ng***04</div>
+<div class="hide-mobile money">DỮ LIỆU THẬT</div>
+<div class="hide-mobile reward">Top 4</div>
+</div>
+
+
+<div class="top-row">
+<div>5</div>
+<div>Ng***05</div>
+<div class="hide-mobile money">DỮ LIỆU THẬT</div>
+<div class="hide-mobile reward">Top 5</div>
+</div>
+
+
+<div class="top-row">
+<div>6</div>
+<div>Ng***06</div>
+<div class="hide-mobile money">DỮ LIỆU THẬT</div>
+<div class="hide-mobile reward">Top 6</div>
+</div>
+
+
+<div class="top-row">
+<div>7</div>
+<div>Ng***07</div>
+<div class="hide-mobile money">DỮ LIỆU THẬT</div>
+<div class="hide-mobile reward">Top 7</div>
+</div>
+
+
+<div class="top-row">
+<div>8</div>
+<div>Ng***08</div>
+<div class="hide-mobile money">DỮ LIỆU THẬT</div>
+<div class="hide-mobile reward">Top 8</div>
+</div>
+
+
+<div class="top-row">
+<div>9</div>
+<div>Ng***09</div>
+<div class="hide-mobile money">DỮ LIỆU THẬT</div>
+<div class="hide-mobile reward">Top 9</div>
+</div>
+
+
+<div class="top-row">
+<div>10</div>
+<div>Ng***10</div>
+<div class="hide-mobile money">DỮ LIỆU THẬT</div>
+<div class="hide-mobile reward">Top 10</div>
 </div>
 
 </div>
@@ -708,16 +898,17 @@ Người chơi mẫu 04
 </div>
 
 <p>
-Lượt quay: <b id="walletSpins">0</b>
+Lượt quay:
+<b id="walletSpins">0</b>
 </p>
 
-<br>
-
-<button class="gold" onclick="depositDemo()">
+<button class="gold"
+onclick="showPage('deposit')">
 💰 NẠP TIỀN
 </button>
 
-<button class="dark" onclick="withdrawDemo()">
+<button class="dark"
+onclick="withdraw()">
 📤 RÚT QH
 </button>
 
@@ -732,18 +923,23 @@ Lượt quay: <b id="walletSpins">0</b>
 
 <div class="modal-box">
 
-<div class="close" onclick="closeLogin()">
+<div class="close"
+onclick="closeLogin()">
 ✕ Đóng
 </div>
 
-<h2>👤 TÀI KHOẢN SHOP</h2>
+<h2>👤 TÀI KHOẢN</h2>
 
-<input id="username" placeholder="Tên đăng nhập">
+<input
+id="username"
+placeholder="Tên đăng nhập"
+>
 
 <input
 id="password"
 type="password"
-placeholder="Mật khẩu">
+placeholder="Mật khẩu"
+>
 
 <button
 class="gold"
@@ -771,6 +967,10 @@ onclick="login()">
 
 <script>
 
+/* =====================
+   DỮ LIỆU DEMO
+===================== */
+
 let currentUser =
 localStorage.getItem("shopUser") || "";
 
@@ -783,10 +983,12 @@ Number(localStorage.getItem("shopSpins") || 0);
 let giftClaimed =
 localStorage.getItem("giftClaimed") === "true";
 
-let spinning = false;
+let spinning=false;
 
 
-/* CHUYỂN TRANG */
+/* =====================
+   CHUYỂN TRANG
+===================== */
 
 function showPage(id){
 
@@ -803,7 +1005,9 @@ window.scrollTo(0,0);
 }
 
 
-/* ĐĂNG NHẬP */
+/* =====================
+   LOGIN
+===================== */
 
 function openLogin(){
 
@@ -819,6 +1023,7 @@ document.getElementById("loginModal")
 
 }
 
+
 function register(){
 
 let username =
@@ -829,14 +1034,14 @@ let password =
 document.getElementById("password")
 .value;
 
-if(username.length < 3){
+if(username.length<3){
 
 alert("Tên đăng nhập tối thiểu 3 ký tự.");
 return;
 
 }
 
-if(password.length < 6){
+if(password.length<6){
 
 alert("Mật khẩu tối thiểu 6 ký tự.");
 return;
@@ -844,24 +1049,32 @@ return;
 }
 
 localStorage.setItem("shopUser",username);
-localStorage.setItem("shopPasswordDemo",password);
+
+localStorage.setItem(
+"shopPasswordDemo",
+password
+);
 
 currentUser=username;
 
 closeLogin();
+
 updateUI();
 
 alert("Đăng ký thành công!");
 
 }
 
+
 function login(){
 
 let username =
-document.getElementById("username").value.trim();
+document.getElementById("username")
+.value.trim();
 
 let password =
-document.getElementById("password").value;
+document.getElementById("password")
+.value;
 
 let savedUser =
 localStorage.getItem("shopUser");
@@ -869,11 +1082,15 @@ localStorage.getItem("shopUser");
 let savedPassword =
 localStorage.getItem("shopPasswordDemo");
 
-if(username===savedUser && password===savedPassword){
+if(
+username===savedUser &&
+password===savedPassword
+){
 
 currentUser=username;
 
 closeLogin();
+
 updateUI();
 
 alert("Đăng nhập thành công!");
@@ -886,10 +1103,14 @@ alert("Sai tài khoản hoặc mật khẩu.");
 
 }
 
+
 function logout(){
 
 localStorage.removeItem("shopUser");
-localStorage.removeItem("shopPasswordDemo");
+
+localStorage.removeItem(
+"shopPasswordDemo"
+);
 
 currentUser="";
 
@@ -898,7 +1119,9 @@ updateUI();
 }
 
 
-/* QUÀ TÂN THỦ */
+/* =====================
+   QUÀ TÂN THỦ
+===================== */
 
 function claimGift(){
 
@@ -920,14 +1143,17 @@ return;
 
 }
 
-let reward =
+let reward=
 Math.random()<0.5 ? 200 : 400;
 
 balance+=reward;
+
 spins+=1;
+
 giftClaimed=true;
 
 save();
+
 updateUI();
 
 alert(
@@ -939,7 +1165,85 @@ alert(
 }
 
 
-/* VÒNG QUAY */
+/* =====================
+   RANDOM ACC
+===================== */
+
+function buyRandom(price,name){
+
+if(!currentUser){
+
+openLogin();
+
+alert("Bạn cần đăng nhập trước.");
+
+return;
+
+}
+
+let ok=confirm(
+name+
+"\n\nGiá: "+
+price.toLocaleString("vi-VN")+
+"đ"+
+"\n\nBạn muốn tiếp tục?"
+);
+
+if(!ok)return;
+
+alert(
+"Đây là giao diện demo.\n\n"+
+"Chức năng thanh toán và tự động giao ACC "
++
+"chưa được kết nối."
+);
+
+}
+
+
+/* =====================
+   NẠP
+===================== */
+
+function showBankNotice(){
+
+alert(
+"Vui lòng chuyển khoản đúng nội dung.\n\n"+
+"Trong bản demo chưa có hệ thống tự động "
++
+"xác nhận giao dịch."
+);
+
+}
+
+
+function cardDemo(){
+
+let type=
+document.getElementById("cardType").value;
+
+let amount=
+document.getElementById("cardAmount").value;
+
+if(!type||!amount){
+
+alert("Vui lòng chọn loại thẻ và mệnh giá.");
+
+return;
+
+}
+
+alert(
+"Đây là giao diện demo.\n\n"+
+"Chưa kết nối cổng thanh toán thẻ thật."
+);
+
+}
+
+
+/* =====================
+   VÒNG QUAY
+===================== */
 
 function spinWheel(){
 
@@ -949,7 +1253,7 @@ if(!currentUser){
 
 openLogin();
 
-alert("Bạn cần đăng nhập trước.");
+alert("Bạn cần đăng nhập.");
 
 return;
 
@@ -964,21 +1268,26 @@ return;
 }
 
 spinning=true;
+
 spins--;
 
 document.getElementById("spinButton")
 .disabled=true;
 
 let rewards=[
-50,100,150,200,300,400,500,1000
+50,100,150,200,
+300,400,500,1000
 ];
 
 let weights=[
-20,20,18,15,12,8,5,2
+20,20,18,15,
+12,8,5,2
 ];
 
 let random=Math.random()*100;
+
 let total=0;
+
 let index=0;
 
 for(let i=0;i<weights.length;i++){
@@ -1006,13 +1315,12 @@ document.getElementById("wheel")
 .style.transform=
 "rotate("+rotation+"deg)";
 
-updateUI();
-
 setTimeout(()=>{
 
 balance+=reward;
 
 save();
+
 updateUI();
 
 spinning=false;
@@ -1020,95 +1328,27 @@ spinning=false;
 document.getElementById("spinButton")
 .disabled=false;
 
-alert("🎉 Bạn trúng "+reward+" QH!");
+alert(
+"🎉 BẠN TRÚNG "+
+reward+
+" QH!"
+);
 
 },4100);
 
 }
 
 
-/* MUA RANDOM */
+/* =====================
+   RÚT
+===================== */
 
-function buyRandom(price){
-
-if(!currentUser){
-
-openLogin();
-
-alert("Bạn cần đăng nhập trước khi mua.");
-
-return;
-
-}
-
-let name="";
-let stock="";
-
-if(price===50000){
-name="RANDOM ACC 50K";
-stock="Kho thực tế";
-}
-
-if(price===300000){
-name="RANDOM ACC 300K - HOT HSSV";
-stock="Kho thực tế";
-}
-
-if(price===500000){
-name="RANDOM ACC 500K - HOT BEST SELLER";
-stock="13 ACC";
-}
-
-if(price===800000){
-name="RANDOM ACC 800K - PREMIUM";
-stock="23 ACC";
-}
-
-let ok=confirm(
-name+
-"\n\nGiá: "+
-price.toLocaleString("vi-VN")+
-"đ"+
-"\nKho: "+stock+
-"\n\nBạn muốn tiếp tục?"
-);
-
-if(!ok)return;
-
-alert(
-"Đây là bản demo.\n\n"+
-"Chưa kết nối thanh toán và hệ thống giao ACC thật."
-);
-
-}
-
-
-/* NẠP */
-
-function depositDemo(){
+function withdraw(){
 
 if(!currentUser){
 
 openLogin();
-return;
 
-}
-
-alert(
-"💰 NẠP TIỀN\n\n"+
-"Chức năng thanh toán thật chưa được kết nối."
-);
-
-}
-
-
-/* RÚT */
-
-function withdrawDemo(){
-
-if(!currentUser){
-
-openLogin();
 return;
 
 }
@@ -1124,32 +1364,41 @@ return;
 }
 
 alert(
-"Chức năng rút thật cần hệ thống backend."
+"Chức năng rút thật cần backend "
++
+"và phương thức thanh toán an toàn."
 );
 
 }
 
 
-/* LƯU */
+/* =====================
+   LƯU
+===================== */
 
 function save(){
 
 localStorage.setItem(
-"shopBalance",balance
+"shopBalance",
+balance
 );
 
 localStorage.setItem(
-"shopSpins",spins
+"shopSpins",
+spins
 );
 
 localStorage.setItem(
-"giftClaimed",giftClaimed
+"giftClaimed",
+giftClaimed
 );
 
 }
 
 
-/* CẬP NHẬT */
+/* =====================
+   UPDATE
+===================== */
 
 function updateUI(){
 
@@ -1191,6 +1440,9 @@ area.innerHTML=`
 }
 
 }
+
+
+/* KHỞI ĐỘNG */
 
 updateUI();
 
