@@ -12,7 +12,7 @@ body{
     margin:0;
     font-family:Arial,sans-serif;
     background:#080b12;
-    color:white
+    color:#fff;
 }
 
 header{
@@ -20,23 +20,22 @@ header{
     border-bottom:1px solid #303b4d;
     position:sticky;
     top:0;
-    z-index:20
+    z-index:10;
 }
 
 .header{
     max-width:1100px;
     margin:auto;
-    padding:14px 20px;
+    padding:15px 20px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:15px
 }
 
 .logo{
     color:#ffd700;
     font-size:20px;
-    font-weight:bold
+    font-weight:bold;
 }
 
 nav{
@@ -45,94 +44,135 @@ nav{
     padding:8px 20px;
     display:flex;
     gap:5px;
-    flex-wrap:wrap
+    flex-wrap:wrap;
 }
 
 nav button{
     background:transparent;
     color:#ddd;
     border:0;
-    padding:9px 12px;
+    padding:10px 13px;
     border-radius:7px;
-    cursor:pointer
+    cursor:pointer;
 }
 
 nav button:hover{
     background:#263247;
-    color:#ffd700
+    color:#ffd700;
 }
 
 button{
-    cursor:pointer;
     border:0;
     border-radius:8px;
     padding:11px 16px;
-    font-weight:bold
+    font-weight:bold;
+    cursor:pointer;
 }
 
 .gold{
     background:#ffd700;
-    color:#111
+    color:#111;
 }
 
 .dark{
     background:#263247;
-    color:white
+    color:white;
 }
 
 .page{
     display:none;
     max-width:1100px;
     margin:auto;
-    padding:35px 20px
+    padding:35px 20px;
 }
 
 .page.active{
-    display:block
+    display:block;
 }
 
 .hero{
     text-align:center;
     padding:70px 20px;
-    background:linear-gradient(#151e30,#080b12)
+    background:linear-gradient(#151e30,#080b12);
 }
 
 .hero h1{
     color:#ffd700;
-    font-size:40px
+    font-size:40px;
 }
 
 .hero p{
-    color:#aaa
+    color:#aaa;
 }
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:20px
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
 }
 
 .card{
     background:#111827;
     border:1px solid #303b4d;
-    border-radius:13px;
-    padding:22px
+    border-radius:14px;
+    padding:22px;
 }
 
 .card h3{
-    color:#ffd700
+    color:#ffd700;
 }
 
 .card p{
-    color:#aaa;
-    line-height:1.6
+    color:#bbb;
+    line-height:1.6;
 }
 
 .price{
     color:#00e676;
-    font-size:21px;
+    font-size:23px;
     font-weight:bold;
-    margin:15px 0
+    margin:16px 0;
+}
+
+.badge{
+    display:inline-block;
+    background:#e53935;
+    padding:6px 10px;
+    border-radius:6px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.badge.goldbadge{
+    background:#b8860b;
+}
+
+.stock{
+    color:#00e676;
+    font-weight:bold;
+}
+
+.notice{
+    background:#182235;
+    border-left:4px solid #ffd700;
+    padding:16px;
+    margin-bottom:25px;
+    border-radius:6px;
+    color:#ccc;
+    line-height:1.6;
+}
+
+.maintenance{
+    text-align:center;
+    padding:45px 20px;
+    background:#111827;
+    border:1px solid #303b4d;
+    border-radius:14px;
+}
+
+.maintenance h2{
+    color:#ffd700;
 }
 
 .balance{
@@ -140,34 +180,25 @@ button{
     background:#111827;
     border:1px solid #303b4d;
     padding:30px;
-    border-radius:14px
+    border-radius:14px;
 }
 
 .qh{
     color:#ffd700;
     font-size:38px;
     font-weight:bold;
-    margin:12px
-}
-
-.notice{
-    background:#182235;
-    border-left:4px solid #ffd700;
-    padding:15px;
-    margin-bottom:20px;
-    border-radius:6px;
-    color:#ccc
+    margin:12px;
 }
 
 .wheel-area{
-    text-align:center
+    text-align:center;
 }
 
 .wheel-wrap{
     width:310px;
     height:310px;
     margin:35px auto;
-    position:relative
+    position:relative;
 }
 
 .pointer{
@@ -180,7 +211,7 @@ button{
     height:0;
     border-left:16px solid transparent;
     border-right:16px solid transparent;
-    border-top:35px solid white
+    border-top:35px solid white;
 }
 
 .wheel{
@@ -198,7 +229,7 @@ button{
         #ff7043 270deg 315deg,
         #8d6e63 315deg 360deg
     );
-    transition:transform 4s cubic-bezier(.15,.75,.12,1)
+    transition:transform 4s cubic-bezier(.15,.75,.12,1);
 }
 
 .wheel-center{
@@ -215,51 +246,21 @@ button{
     align-items:center;
     justify-content:center;
     font-weight:bold;
-    z-index:4
-}
-
-.prizes{
-    max-width:600px;
-    margin:30px auto
-}
-
-.prizes div{
-    display:flex;
-    justify-content:space-between;
-    padding:11px;
-    border-bottom:1px solid #303b4d
-}
-
-.form{
-    max-width:430px;
-    margin:auto;
-    background:#111827;
-    padding:25px;
-    border-radius:13px
-}
-
-input{
-    width:100%;
-    padding:13px;
-    margin:7px 0;
-    background:#080b12;
-    border:1px solid #303b4d;
-    border-radius:7px;
-    color:white
+    z-index:4;
 }
 
 .table{
     background:#111827;
     border:1px solid #303b4d;
     border-radius:12px;
-    overflow:hidden
+    overflow:hidden;
 }
 
 .row{
     display:grid;
     grid-template-columns:60px 1fr 1fr;
     padding:14px;
-    border-bottom:1px solid #303b4d
+    border-bottom:1px solid #303b4d;
 }
 
 .modal{
@@ -270,42 +271,47 @@ input{
     align-items:center;
     justify-content:center;
     padding:20px;
-    z-index:100
+    z-index:100;
 }
 
 .modal-box{
     width:100%;
-    max-width:420px;
+    max-width:430px;
     background:#111827;
     padding:25px;
-    border-radius:14px
+    border-radius:14px;
 }
 
 .close{
     text-align:right;
     color:#aaa;
-    cursor:pointer
+    cursor:pointer;
+}
+
+input{
+    width:100%;
+    padding:13px;
+    margin:7px 0;
+    background:#080b12;
+    border:1px solid #303b4d;
+    border-radius:7px;
+    color:white;
 }
 
 footer{
     text-align:center;
     color:#666;
-    padding:40px
+    padding:40px;
 }
 
 @media(max-width:700px){
     .header{
-        flex-direction:column
+        flex-direction:column;
+        gap:10px;
     }
 
     .hero h1{
-        font-size:30px
-    }
-
-    .wheel-wrap{
-        transform:scale(.85);
-        margin-left:auto;
-        margin-right:auto
+        font-size:30px;
     }
 }
 </style>
@@ -322,9 +328,7 @@ footer{
 </div>
 
 <div id="accountArea">
-<button class="gold" onclick="openLogin()">
-Đăng nhập
-</button>
+<button class="gold" onclick="openLogin()">Đăng nhập</button>
 </div>
 
 </div>
@@ -332,13 +336,9 @@ footer{
 <nav>
 
 <button onclick="showPage('home')">🏠 Trang chủ</button>
-
-<button onclick="showPage('wheel')">🎰 Vòng quay</button>
-
 <button onclick="showPage('random')">🎲 Random ACC</button>
-
+<button onclick="showPage('wheel')">🎰 Vòng quay</button>
 <button onclick="showPage('top')">🏆 Top nạp</button>
-
 <button onclick="showPage('wallet')">💎 Ví QH</button>
 
 </nav>
@@ -346,7 +346,7 @@ footer{
 </header>
 
 
-<!-- HOME -->
+<!-- TRANG CHỦ -->
 
 <section id="home" class="page active">
 
@@ -355,7 +355,7 @@ footer{
 <h1>🎁 SHOP QUÀ TẶNG LIÊN QUÂN</h1>
 
 <p>
-Quà tân thủ • Vòng quay QH • Random ACC
+Random ACC • Vòng quay QH • Quà tân thủ
 </p>
 
 <button class="gold" onclick="claimGift()">
@@ -370,26 +370,24 @@ Quà tân thủ • Vòng quay QH • Random ACC
 
 <div class="card">
 
-<h3>🎁 Quà tân thủ</h3>
+<h3>🎲 Random ACC</h3>
 
 <p>
-Khách mới được nhận quà một lần.
-Phần thưởng: 200 hoặc 400 QH + 1 lượt quay.
+Nhiều gói Random ACC từ 50K đến 800K.
 </p>
 
-<button class="gold" onclick="claimGift()">
-NHẬN QUÀ
+<button class="gold" onclick="showPage('random')">
+XEM GÓI
 </button>
 
 </div>
-
 
 <div class="card">
 
 <h3>🎰 Vòng quay QH</h3>
 
 <p>
-Quay để nhận QH theo bảng phần thưởng công khai.
+Quay và nhận QH theo bảng phần thưởng được công bố.
 </p>
 
 <button class="gold" onclick="showPage('wheel')">
@@ -398,17 +396,16 @@ QUAY NGAY
 
 </div>
 
-
 <div class="card">
 
-<h3>🎲 Random ACC</h3>
+<h3>🎁 Quà tân thủ</h3>
 
 <p>
-Chức năng Random ACC hiện đang được bảo trì.
+Khách mới nhận 200 hoặc 400 QH và 1 lượt quay.
 </p>
 
-<button class="dark" onclick="showPage('random')">
-XEM
+<button class="gold" onclick="claimGift()">
+NHẬN QUÀ
 </button>
 
 </div>
@@ -418,7 +415,179 @@ XEM
 </section>
 
 
-<!-- WHEEL -->
+<!-- RANDOM ACC -->
+
+<section id="random" class="page">
+
+<h1>🎲 RANDOM ACC</h1>
+
+<div class="notice">
+
+📝 <b>GHI CHÚ KHI MUA RANDOM ACC</b><br><br>
+
+Random ACC được chia thành nhiều mức giá.
+Mỗi mức sử dụng kho tài khoản tương ứng.<br><br>
+
+Tài khoản nhận được phụ thuộc vào kho thực tế
+của gói đã mua. Vui lòng kiểm tra thông tin trước
+khi đặt mua.
+
+</div>
+
+
+<div class="cards">
+
+
+<!-- 50K -->
+
+<div class="card">
+
+<h3>🎲 RANDOM ACC 50K</h3>
+
+<p>
+Gói Random cơ bản dành cho người muốn thử.
+</p>
+
+<p>
+🎁 Phần thưởng phụ thuộc kho ACC thực tế.
+</p>
+
+<div class="price">
+50.000đ
+</div>
+
+<p class="stock">
+● Còn hàng
+</p>
+
+<button class="gold" onclick="buyRandom(50000)">
+MUA RANDOM
+</button>
+
+</div>
+
+
+<!-- 300K -->
+
+<div class="card">
+
+<span class="badge">
+🔥 HOT HSSV
+</span>
+
+<h3>🎲 RANDOM ACC 300K</h3>
+
+<p>
+Gói Hot dành cho học sinh, sinh viên.
+</p>
+
+<p>
+🎁 Phần thưởng phụ thuộc kho ACC thực tế.
+</p>
+
+<div class="price">
+300.000đ
+</div>
+
+<p class="stock">
+● Còn hàng
+</p>
+
+<button class="gold" onclick="buyRandom(300000)">
+MUA RANDOM
+</button>
+
+</div>
+
+
+<!-- 500K -->
+
+<div class="card">
+
+<span class="badge">
+🔥 HOT • BEST SELLER
+</span>
+
+<h3>🎲 RANDOM ACC 500K</h3>
+
+<p>
+Gói Random được đánh dấu Best Seller.
+</p>
+
+<p>
+📦 Số lượng hiện tại: <b>13 ACC</b>
+</p>
+
+<div class="price">
+500.000đ
+</div>
+
+<p class="stock">
+● Còn 13 ACC
+</p>
+
+<button class="gold" onclick="buyRandom(500000)">
+MUA RANDOM
+</button>
+
+</div>
+
+
+<!-- 800K -->
+
+<div class="card">
+
+<span class="badge goldbadge">
+👑 PREMIUM
+</span>
+
+<h3>🎲 RANDOM ACC 800K</h3>
+
+<p>
+Gói Random Premium.
+</p>
+
+<p>
+📦 Số lượng hiện tại: <b>23 ACC</b>
+</p>
+
+<div class="price">
+800.000đ
+</div>
+
+<p class="stock">
+● Còn 23 ACC
+</p>
+
+<button class="gold" onclick="buyRandom(800000)">
+MUA RANDOM
+</button>
+
+</div>
+
+</div>
+
+
+<br><br>
+
+<div class="maintenance">
+
+<h2>🔧 KHO ACC THƯỜNG</h2>
+
+<p>
+Kho ACC thường hiện đang bảo trì để sửa lỗi.
+</p>
+
+<button class="dark" disabled>
+ĐANG BẢO TRÌ
+</button>
+
+</div>
+
+</section>
+
+
+<!-- VÒNG QUAY -->
 
 <section id="wheel" class="page">
 
@@ -426,7 +595,8 @@ XEM
 
 <div class="notice">
 
-<b>Bảng phần thưởng:</b><br>
+<b>Phần thưởng:</b><br><br>
+
 50 QH — 20%<br>
 100 QH — 20%<br>
 150 QH — 18%<br>
@@ -453,20 +623,17 @@ QH
 </div>
 
 <p>
-Lượt quay:
-<b id="spins">0</b>
+Lượt quay: <b id="spins">0</b>
 </p>
 
 <p>
-Số dư:
-<b id="wheelBalance">0</b> QH
+Số dư: <b id="wheelBalance">0</b> QH
 </p>
 
 <button
 id="spinButton"
 class="gold"
-onclick="spinWheel()"
->
+onclick="spinWheel()">
 🎰 QUAY
 </button>
 
@@ -475,39 +642,7 @@ onclick="spinWheel()"
 </section>
 
 
-<!-- RANDOM ACC -->
-
-<section id="random" class="page">
-
-<h1>🎲 RANDOM ACC</h1>
-
-<div class="notice">
-
-🔧 <b>Đang bảo trì</b><br><br>
-
-Hệ thống Random ACC đang được sửa chữa.
-Vui lòng quay lại sau.
-
-</div>
-
-<div class="card">
-
-<h3>Kho ACC</h3>
-
-<p>
-Chức năng này tạm thời đóng để bảo trì.
-</p>
-
-<button class="dark" disabled>
-ĐANG BẢO TRÌ
-</button>
-
-</div>
-
-</section>
-
-
-<!-- TOP -->
+<!-- TOP NẠP -->
 
 <section id="top" class="page">
 
@@ -516,8 +651,8 @@ Chức năng này tạm thời đóng để bảo trì.
 <div class="notice">
 
 ⚠️ <b>DỮ LIỆU MẪU</b><br>
-Các tên và số tiền dưới đây chỉ dùng để xem giao diện.
-Không phải dữ liệu khách hàng thật.
+Các dữ liệu bên dưới chỉ minh họa giao diện,
+không phải giao dịch hoặc khách hàng thật.
 
 </div>
 
@@ -553,18 +688,12 @@ Người chơi mẫu 04
 300.000đ
 </div>
 
-<div class="row">
-5
-Người chơi mẫu 05
-100.000đ
-</div>
-
 </div>
 
 </section>
 
 
-<!-- WALLET -->
+<!-- VÍ -->
 
 <section id="wallet" class="page">
 
@@ -579,18 +708,17 @@ Người chơi mẫu 05
 </div>
 
 <p>
-Lượt quay:
-<b id="walletSpins">0</b>
+Lượt quay: <b id="walletSpins">0</b>
 </p>
 
 <br>
 
 <button class="gold" onclick="depositDemo()">
-💰 Nạp tiền
+💰 NẠP TIỀN
 </button>
 
 <button class="dark" onclick="withdrawDemo()">
-📤 Rút QH
+📤 RÚT QH
 </button>
 
 </div>
@@ -610,30 +738,24 @@ Lượt quay:
 
 <h2>👤 TÀI KHOẢN SHOP</h2>
 
-<input
-id="username"
-placeholder="Tên đăng nhập"
->
+<input id="username" placeholder="Tên đăng nhập">
 
 <input
 id="password"
 type="password"
-placeholder="Mật khẩu"
->
+placeholder="Mật khẩu">
 
 <button
 class="gold"
 style="width:100%;margin-top:10px"
-onclick="register()"
->
+onclick="register()">
 ĐĂNG KÝ
 </button>
 
 <button
 class="dark"
 style="width:100%;margin-top:10px"
-onclick="login()"
->
+onclick="login()">
 ĐĂNG NHẬP
 </button>
 
@@ -648,10 +770,6 @@ onclick="login()"
 
 
 <script>
-
-/* =========================
-   DỮ LIỆU DEMO
-========================= */
 
 let currentUser =
 localStorage.getItem("shopUser") || "";
@@ -668,22 +786,16 @@ localStorage.getItem("giftClaimed") === "true";
 let spinning = false;
 
 
-/* =========================
-   TRANG
-========================= */
+/* CHUYỂN TRANG */
 
 function showPage(id){
 
-document
-.querySelectorAll(".page")
-.forEach(function(page){
-
+document.querySelectorAll(".page")
+.forEach(page=>{
 page.classList.remove("active");
-
 });
 
-document
-.getElementById(id)
+document.getElementById(id)
 .classList.add("active");
 
 window.scrollTo(0,0);
@@ -691,27 +803,21 @@ window.scrollTo(0,0);
 }
 
 
-/* =========================
-   ĐĂNG NHẬP DEMO
-========================= */
+/* ĐĂNG NHẬP */
 
 function openLogin(){
 
-document
-.getElementById("loginModal")
+document.getElementById("loginModal")
 .style.display="flex";
 
 }
 
-
 function closeLogin(){
 
-document
-.getElementById("loginModal")
+document.getElementById("loginModal")
 .style.display="none";
 
 }
-
 
 function register(){
 
@@ -725,50 +831,37 @@ document.getElementById("password")
 
 if(username.length < 3){
 
-alert("Tên đăng nhập phải có ít nhất 3 ký tự.");
-
+alert("Tên đăng nhập tối thiểu 3 ký tự.");
 return;
 
 }
 
 if(password.length < 6){
 
-alert("Mật khẩu phải có ít nhất 6 ký tự.");
-
+alert("Mật khẩu tối thiểu 6 ký tự.");
 return;
 
 }
 
-localStorage.setItem(
-"shopUser",
-username
-);
-
-localStorage.setItem(
-"shopPasswordDemo",
-password
-);
+localStorage.setItem("shopUser",username);
+localStorage.setItem("shopPasswordDemo",password);
 
 currentUser=username;
 
 closeLogin();
-
 updateUI();
 
 alert("Đăng ký thành công!");
 
 }
 
-
 function login(){
 
 let username =
-document.getElementById("username")
-.value.trim();
+document.getElementById("username").value.trim();
 
 let password =
-document.getElementById("password")
-.value;
+document.getElementById("password").value;
 
 let savedUser =
 localStorage.getItem("shopUser");
@@ -776,32 +869,26 @@ localStorage.getItem("shopUser");
 let savedPassword =
 localStorage.getItem("shopPasswordDemo");
 
-if(
-username === savedUser &&
-password === savedPassword
-){
+if(username===savedUser && password===savedPassword){
 
 currentUser=username;
 
 closeLogin();
-
 updateUI();
 
 alert("Đăng nhập thành công!");
 
 }else{
 
-alert("Sai tên đăng nhập hoặc mật khẩu.");
+alert("Sai tài khoản hoặc mật khẩu.");
 
 }
 
 }
-
 
 function logout(){
 
 localStorage.removeItem("shopUser");
-
 localStorage.removeItem("shopPasswordDemo");
 
 currentUser="";
@@ -811,9 +898,7 @@ updateUI();
 }
 
 
-/* =========================
-   QUÀ TÂN THỦ
-========================= */
+/* QUÀ TÂN THỦ */
 
 function claimGift(){
 
@@ -829,27 +914,24 @@ return;
 
 if(giftClaimed){
 
-alert("Bạn đã nhận quà tân thủ rồi.");
+alert("Tài khoản này đã nhận quà.");
 
 return;
 
 }
 
 let reward =
-Math.random() < 0.5 ? 200 : 400;
+Math.random()<0.5 ? 200 : 400;
 
-balance += reward;
-
-spins += 1;
-
+balance+=reward;
+spins+=1;
 giftClaimed=true;
 
 save();
-
 updateUI();
 
 alert(
-"🎉 Chúc mừng!\n\n"+
+"🎉 CHÚC MỪNG!\n\n"+
 "Bạn nhận được "+reward+" QH\n"+
 "+ 1 lượt quay."
 );
@@ -857,17 +939,11 @@ alert(
 }
 
 
-/* =========================
-   VÒNG QUAY
-========================= */
+/* VÒNG QUAY */
 
 function spinWheel(){
 
-if(spinning){
-
-return;
-
-}
+if(spinning)return;
 
 if(!currentUser){
 
@@ -879,70 +955,39 @@ return;
 
 }
 
-if(spins <= 0){
+if(spins<=0){
 
-alert("Bạn không có lượt quay.");
+alert("Bạn không còn lượt quay.");
 
 return;
 
 }
 
 spinning=true;
-
-document
-.getElementById("spinButton")
-.disabled=true;
-
 spins--;
 
-updateUI();
-
-
-/*
-   Phần thưởng được chọn trước,
-   sau đó bánh xe quay đúng vị trí
-   của phần thưởng.
-*/
+document.getElementById("spinButton")
+.disabled=true;
 
 let rewards=[
-50,
-100,
-150,
-200,
-300,
-400,
-500,
-1000
+50,100,150,200,300,400,500,1000
 ];
-
-
-/*
-   Trọng số:
-   20,20,18,15,12,8,5,2
-*/
 
 let weights=[
 20,20,18,15,12,8,5,2
 ];
 
 let random=Math.random()*100;
-
 let total=0;
-
 let index=0;
 
-for(
-let i=0;
-i<weights.length;
-i++
-){
+for(let i=0;i<weights.length;i++){
 
-total += weights[i];
+total+=weights[i];
 
-if(random <= total){
+if(random<=total){
 
 index=i;
-
 break;
 
 }
@@ -951,100 +996,127 @@ break;
 
 let reward=rewards[index];
 
+let target=
+360-(index*45+22.5);
 
-/*
-   Mỗi ô rộng 45 độ.
-   Tâm phần thưởng:
-   22.5 + index*45
-*/
+let rotation=
+360*6+target;
 
-let targetAngle=
-360 - (index*45 + 22.5);
+document.getElementById("wheel")
+.style.transform=
+"rotate("+rotation+"deg)";
 
+updateUI();
 
-/*
-   Quay nhiều vòng trước khi
-   dừng ở phần thưởng.
-*/
+setTimeout(()=>{
 
-let extra=
-360 * 6;
-
-let finalRotation=
-extra + targetAngle;
-
-let wheel=
-document.getElementById("wheel");
-
-wheel.style.transform=
-"rotate("+finalRotation+"deg)";
-
-
-setTimeout(function(){
-
-balance += reward;
+balance+=reward;
 
 save();
-
 updateUI();
 
 spinning=false;
 
-document
-.getElementById("spinButton")
+document.getElementById("spinButton")
 .disabled=false;
 
-alert(
-"🎉 KẾT QUẢ VÒNG QUAY\n\n"+
-"Bạn trúng: "+reward+" QH"
-);
+alert("🎉 Bạn trúng "+reward+" QH!");
 
 },4100);
 
 }
 
 
-/* =========================
-   NẠP DEMO
-========================= */
+/* MUA RANDOM */
+
+function buyRandom(price){
+
+if(!currentUser){
+
+openLogin();
+
+alert("Bạn cần đăng nhập trước khi mua.");
+
+return;
+
+}
+
+let name="";
+let stock="";
+
+if(price===50000){
+name="RANDOM ACC 50K";
+stock="Kho thực tế";
+}
+
+if(price===300000){
+name="RANDOM ACC 300K - HOT HSSV";
+stock="Kho thực tế";
+}
+
+if(price===500000){
+name="RANDOM ACC 500K - HOT BEST SELLER";
+stock="13 ACC";
+}
+
+if(price===800000){
+name="RANDOM ACC 800K - PREMIUM";
+stock="23 ACC";
+}
+
+let ok=confirm(
+name+
+"\n\nGiá: "+
+price.toLocaleString("vi-VN")+
+"đ"+
+"\nKho: "+stock+
+"\n\nBạn muốn tiếp tục?"
+);
+
+if(!ok)return;
+
+alert(
+"Đây là bản demo.\n\n"+
+"Chưa kết nối thanh toán và hệ thống giao ACC thật."
+);
+
+}
+
+
+/* NẠP */
 
 function depositDemo(){
 
 if(!currentUser){
 
 openLogin();
-
 return;
 
 }
 
 alert(
 "💰 NẠP TIỀN\n\n"+
-"Đây hiện chỉ là giao diện demo.\n"+
-"Chưa kết nối thanh toán thật."
+"Chức năng thanh toán thật chưa được kết nối."
 );
 
 }
 
 
-/* =========================
-   RÚT DEMO
-========================= */
+/* RÚT */
 
 function withdrawDemo(){
 
 if(!currentUser){
 
 openLogin();
-
 return;
 
 }
 
-if(balance < 1000){
+if(balance<1000){
 
 alert(
-"Bạn cần tối thiểu 1.000 QH để rút."
+"Cần tối thiểu 1.000 QH để rút."
 );
 
 return;
@@ -1052,88 +1124,66 @@ return;
 }
 
 alert(
-"📤 Chức năng rút tiền thật cần backend, "+
-"xác minh giao dịch và hệ thống thanh toán."
+"Chức năng rút thật cần hệ thống backend."
 );
 
 }
 
 
-/* =========================
-   LƯU DỮ LIỆU
-========================= */
+/* LƯU */
 
 function save(){
 
 localStorage.setItem(
-"shopBalance",
-balance
+"shopBalance",balance
 );
 
 localStorage.setItem(
-"shopSpins",
-spins
+"shopSpins",spins
 );
 
 localStorage.setItem(
-"giftClaimed",
-giftClaimed
+"giftClaimed",giftClaimed
 );
 
 }
 
 
-/* =========================
-   CẬP NHẬT GIAO DIỆN
-========================= */
+/* CẬP NHẬT */
 
 function updateUI(){
 
-document
-.getElementById("balance")
+document.getElementById("balance")
 .innerText=balance;
 
-document
-.getElementById("wheelBalance")
+document.getElementById("wheelBalance")
 .innerText=balance;
 
-document
-.getElementById("spins")
+document.getElementById("spins")
 .innerText=spins;
 
-document
-.getElementById("walletSpins")
+document.getElementById("walletSpins")
 .innerText=spins;
 
-
-let accountArea=
+let area=
 document.getElementById("accountArea");
-
 
 if(currentUser){
 
-accountArea.innerHTML=
-`
+area.innerHTML=`
 <span>👤 ${currentUser}</span>
 <span style="color:#ffd700">
 💎 ${balance} QH
 </span>
-<button
-class="dark"
-onclick="logout()"
->
+<button class="dark" onclick="logout()">
 Đăng xuất
 </button>
 `;
 
 }else{
 
-accountArea.innerHTML=
-`
-<button
-class="gold"
-onclick="openLogin()"
->
+area.innerHTML=`
+<button class="gold" onclick="openLogin()">
 Đăng nhập
 </button>
 `;
@@ -1141,9 +1191,6 @@ onclick="openLogin()"
 }
 
 }
-
-
-/* KHỞI ĐỘNG */
 
 updateUI();
 
