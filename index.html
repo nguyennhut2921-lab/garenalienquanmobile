@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GARENA LIÊN QUÂN MOBILE</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0d1117;
+    color: white;
+}
+
+header {
+    background: #161b22;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #238636;
+}
+
+header h1 {
+    color: #00ff88;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #aaa;
+}
+
+nav {
+    background: #21262d;
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    color: #00ff88;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00ff88;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 18px;
+}
+
+.card h2 {
+    margin-bottom: 10px;
+}
+
+.info {
+    color: #aaa;
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.price {
+    color: #00ff88;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #00c76f;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00a85d;
+}
+
+.contact {
+    margin-top: 40px;
+    padding: 25px;
+    background: #161b22;
+    border-radius: 12px;
+    text-align: center;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 25px;
+    text-align: center;
+    color: #888;
+    background: #161b22;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>GARENA LIÊN QUÂN MOBILE</h1>
+    <p>Shop tài khoản Liên Quân Mobile</p>
+</header>
+
+<nav>
+    <a href="#">Trang chủ</a>
+    <a href="#shop">Tài khoản</a>
+    <a href="#contact">Liên hệ</a>
+</nav>
+
+<div class="container">
+
+    <div class="title" id="shop">
+        <h1>🔥 TÀI KHOẢN ĐANG BÁN 🔥</h1>
+    </div>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="https://placehold.co/600x400/161b22/00ff88?text=ACC+01">
+            <div class="card-content">
+                <h2>ACC Liên Quân #001</h2>
+                <p class="info">
+                    ⭐ Nhiều tướng<br>
+                    ⭐ Nhiều trang phục<br>
+                    ⭐ Rank Cao Thủ
+                </p>
+                <div class="price">500.000đ</div>
+                <button onclick="buy('ACC Liên Quân #001')">
+                    MUA NGAY
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://placehold.co/600x400/161b22/00ff88?text=ACC+02">
+            <div class="card-content">
+                <h2>ACC Liên Quân #002</h2>
+                <p class="info">
+                    ⭐ 100+ tướng<br>
+                    ⭐ Nhiều skin<br>
+                    ⭐ Rank Tinh Anh
+                </p>
+                <div class="price">300.000đ</div>
+                <button onclick="buy('ACC Liên Quân #002')">
+                    MUA NGAY
+                </button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://placehold.co/600x400/161b22/00ff88?text=ACC+03">
+            <div class="card-content">
+                <h2>ACC Liên Quân #003</h2>
+                <p class="info">
+                    ⭐ Nhiều tướng<br>
+                    ⭐ Skin đẹp<br>
+                    ⭐ Tài khoản sạch
+                </p>
+                <div class="price">200.000đ</div>
+                <button onclick="buy('ACC Liên Quân #003')">
+                    MUA NGAY
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="contact" id="contact">
+        <h2>📞 Liên hệ</h2>
+        <br>
+        <p>Facebook: Facebook-cua-ban</p>
+        <p>Zalo: 0123456789</p>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Garena Lien Quan Mobile Shop
+</footer>
+
+<script>
+function buy(account) {
+    alert(
+        "Bạn đang chọn: " + account +
+        "\n\nVui lòng liên hệ shop để thanh toán và nhận tài khoản."
+    );
+}
+</script>
+
+</body>
+</html>
